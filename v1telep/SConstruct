@@ -14,10 +14,10 @@ list = Builder(action = 'xc16-objdump -S -D $SOURCE > $TARGET',
                src_suffix = 'elf')
 env.Append(BUILDERS = {'List' : list})
 
-env.Program('paddle', ['paddle.c',
+env.Program('telly', ['telly.c',
                              'descriptors.c',
                              '../lib/usb.c',
                              '../lib/ajuart.c',
                              '../lib/elecanisms.c'])
-env.Hex('paddle')
-env.List('paddle')
+env.Hex('telly')
+env.List('telly')
